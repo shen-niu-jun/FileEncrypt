@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件加密解密工具 - URL下载版</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> 文件加密解密工具 </h1>
+        </header>
+
+        <main>
+            <!-- 文件上传区域 -->
+            <section class="upload-section">
+                <div class="upload-box" id="dropZone">
+                    <div class="upload-content">
+                        <div class="upload-icon">📁</div>
+                        <h3>选择或拖放文件到这里</h3>
+                        <p>支持单个文件加密/解密</p>
+                        <button class="btn-secondary" id="selectFileBtn" type="button">选择文件</button>
+                    </div>
+                    <input type="file" id="fileInput" style="display: none;">
+                </div>
+                
+                <div class="file-info" id="fileInfo" style="display: none;">
+                    <h4>已选择文件:</h4>
+                    <p id="fileName"></p>
+                    <p id="fileSize"></p>
+                </div>
+            </section>
+
+            <!-- 密码输入区域 -->
+            <section class="password-section">
+                <label for="passwordInput">加密密码:</label>
+                <input type="password" id="passwordInput" placeholder="请输入加密/解密密码">
+                <small>注意：请牢记密码，丢失后将无法解密文件</small>
+            </section>
+
+            <!-- 操作按钮 -->
+            <section class="action-section">
+                <button class="btn-primary" id="encryptBtn">🔐 加密文件</button>
+                <button class="btn-secondary" id="decryptBtn">🔓 解密文件</button>
+            </section>
+
+            <!-- 状态显示 -->
+            <section class="status-section">
+                <div class="status-message" id="statusMessage"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>使用说明：上传文件 → 输入密码 → 选择加密或解密 → 点击下载链接获取文件</p>
+        </footer>
+    </div>
+s
+    <script src="script.js"></script>
+</body>
+</html>

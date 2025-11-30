@@ -1,0 +1,261 @@
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #4561dd; /* 添加备用背景色 */
+    background-image: url('./Aliya.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+/* 头部样式 */
+header {
+    background: linear-gradient(135deg, #2c3e5000, #34495e00);
+    color: rgba(255, 255, 255, 0);
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 1.1em;
+}
+
+/* 主内容区域 */
+main {
+    padding: 30px;
+}
+
+/* 上传区域 */
+.upload-section {
+    margin-bottom: 30px;
+}
+
+.upload-box {
+    border: 3px dashed #3498db;
+    border-radius: 10px;
+    padding: 20px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #f8f9fa00;
+}
+
+.upload-box:hover {
+    border-color: #2980b9;
+    background: #e8f4fd3a;
+}
+
+.upload-box.dragover {
+    border-color: #27ae60;
+    background: #d5f4e6;
+}
+
+.upload-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.upload-content h3 {
+    color: #6e1ef9a6;
+    margin-bottom: 10px;
+}
+
+.upload-content p {
+    color: #6e1ef9a6;
+    margin-bottom: 20px;
+}
+
+.file-info {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e8f4fd;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.file-info h4 {
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+/* 密码区域 */
+.password-section {
+    margin: 30px 0;
+}
+
+.password-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #000000cf;
+}
+
+.password-section input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #dddddd00;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.password-section input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.password-strength {
+    margin-top: 8px;
+    height: 4px;
+    border-radius: 2px;
+    background: #ecf0f100;
+    overflow: hidden;
+}
+
+/* 操作按钮 */
+.action-section {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.btn-primary, .btn-secondary {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #01e9f9bd, #7f8c8d);
+    color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(149, 165, 166, 0.4);
+}
+
+.btn-primary:disabled, .btn-secondary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* 状态显示 */
+.status-section {
+    margin-top: 20px;
+}
+
+.status-message {
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
+
+.status-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block;
+}
+
+.status-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: block;
+}
+
+.status-message.info {
+    background: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+    display: block;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #ecf0f1;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #278acc, #2ecc71);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* 底部 */
+footer {
+    background: #34495e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+        border-radius: 10px;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    .action-section {
+        flex-direction: column;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+}
